@@ -35,12 +35,16 @@ void Traectory() {
     cin >> coordinateOfPointX >> coordinateOfPointY;
     int length = ((CoordinateX * CoordinateX) - (coordinateOfPointX * coordinateOfPointX)) +
                  ((CoordinateY * CoordinateY) - (coordinateOfPointY * coordinateOfPointY));
-    int n = 1 / 2;
-    for (int x = CoordinateX; x < lastCoordinateX; x += 2) {
-        n += n;
-        new_CoordinateY = length * n;
-        printf("%d\n", new_CoordinateY);
+    if (length < radius || length == radius) {
+        int n = 1 / 2;
+        for (int x = CoordinateX; x < lastCoordinateX; x += 2) {
+            n += n;
+            new_CoordinateY = length * n;
+            printf("%d\n", new_CoordinateY);
+        }
     }
+} else {
+    cout << "wrong type" << endl;
 }
 
 int main() {
