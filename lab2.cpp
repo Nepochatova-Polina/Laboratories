@@ -40,7 +40,7 @@ void Traectory() {
         for (int x = CoordinateX; x < lastCoordinateX; x += 2) {
             n += n;
             new_CoordinateY = length * n;
-            printf("%d\n", new_CoordinateY);
+          cout << new_CoordinateY << endl;
         }
     }
 } else {
